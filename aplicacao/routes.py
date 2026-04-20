@@ -4,7 +4,11 @@ from flask import render_template, url_for
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    usuario = "UserDev"
+    context = {
+        "usuario": usuario,
+    }
+    return render_template("index.html", context = context)
 
 @app.route("/gen")
 def gen():
