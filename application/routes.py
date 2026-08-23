@@ -1,6 +1,6 @@
 from application import app
 
-from flask import render_template, url_for
+from flask import render_template, url_for, request
 
 @app.route("/")
 def home():
@@ -10,6 +10,13 @@ def home():
     }
     return render_template("index.html", context = context)
 
-@app.route("/contact")
+@app.route("/contact", methods=["GET", "POST"])
 def con():
-    return render_template("contact.html")
+    context = {}
+    if request.method == "GET":
+        research = request.args.get("research")
+        context.update({"research":research})
+    if request.method == "POST":
+            research = request.args.get("research")
+            context.update({"research":research})
+    return render_template("contact.html", context=context)

@@ -10,7 +10,7 @@
 
     <div class="container">
         <div class="row mt-4">
-            <h3>Contacts</h3>
+            <h3>Formulário GET</h3>
             <form action="" method="get" class="row mt-4">
                 <div class="col-9">
                     Digite algo para pesquisa
@@ -20,6 +20,25 @@
                     <button type="submit" class="btn btn-primary mt-4 col-12">Search</button>
                 </div>
             </form>
+            
+            <p>Você pesquisou: {{context["research"]}}</p>
+
+            <hr>
+            <hr>
+            <div class="row">
+                <h3>Formulário POST</h3>
+            </div>
+
+            <form action="" method="post" class="row mt-4">
+                <div class="col-9">
+                    Digite algo para pesquisa
+                    <input type="text" name="research" id="" class="form-control">
+                </div>
+                <div class="col-3">
+                    <button type="submit" class="btn btn-primary mt-4 col-12">Search</button>
+                </div>
+            </form>
+
         </div>
     </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
